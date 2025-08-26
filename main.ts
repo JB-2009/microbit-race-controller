@@ -19,6 +19,9 @@ input.onGesture(Gesture.TiltRight, function () {
 input.onGesture(Gesture.LogoDown, function () {
     radio.sendNumber(1)
 })
+input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    radio.sendNumber(8)
+})
 basic.forever(function () {
     radio.setGroup(208)
     radio.setTransmitPower(7)
